@@ -17,7 +17,7 @@
       (println (format "Build folder \"%s\" removed" build-folder)))
 (defn uber [_]
       (clean nil)
-      (b/copy-dir {:src-dirs   ["resources"]         ; copy resources
+      (b/copy-dir {:src-dirs   ["src" "resources"]         ; copy resources
                    :target-dir jar-content})
 
       (b/compile-clj {:basis     basis               ; compile clojure code
