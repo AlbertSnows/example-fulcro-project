@@ -1,21 +1,5 @@
 {:legal-origins              #{"localhost" "dev.lvh.me"}
-
  :org.httpkit.server/config {:port 3000}
-
- :taoensso.timbre/logging-config
-                             {:level        :info
-                              :ns-whitelist []
-                              :ns-blacklist ["datomic.kv-cluster"
-                                             "datomic.process-monitor"
-                                             "datomic.reconnector2"
-                                             "datomic.common"
-                                             "datomic.peer"
-                                             "datomic.log"
-                                             "datomic.db"
-                                             "datomic.slf4j"
-                                             "org.projectodd.wunderboss.web.Web"
-                                             "shadow.cljs.devtools.server.worker.impl"]}
-
  ;; The ssl-redirect defaulted to off, but for security should probably be on in production.
  :ring.middleware/defaults-config
                              {:params    {:keywordize true
@@ -35,4 +19,5 @@
                                           :ssl-redirect   false
                                           :frame-options  :sameorigin
                                           :xss-protection {:enable? true
-                                                           :mode    :block}}}}
+                                                           :mode    :block}}}
+ }
