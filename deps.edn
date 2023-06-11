@@ -1,6 +1,6 @@
 {:paths   ["src/main" "resources"]
 
- :deps    {org.clojure/clojure                 {:mvn/version "1.10.1"}
+ :deps    {org.clojure/clojure                 {:mvn/version "1.11.1"}
            bidi/bidi                                {:mvn/version "2.1.6"}
            bk/ring-gzip                        {:mvn/version "0.3.0"}
            com.taoensso/timbre                 {:mvn/version "4.10.0"}
@@ -31,8 +31,8 @@
            buddy/buddy-hashers                 {:mvn/version "1.4.0"}}
 
 
- :aliases {:build {:deps {io.github.clojure/tools.build {:git/tag "v0.9.4" :git/sha "76b78fe"}
-                          :ns-default build}}
+ :aliases {:build {:deps {io.github.clojure/tools.build {:git/tag "v0.9.4" :git/sha "76b78fe"}}
+                   :ns-default build}
            :clj-tests {:extra-paths ["src/test"]
                        :main-opts   ["-m" "kaocha.runner"]
                        :extra-deps  {lambdaisland/kaocha {:mvn/version "1.0-612"}}}
