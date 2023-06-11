@@ -6,10 +6,11 @@
 (def class-dir "target/classes")
 (def basis (b/create-basis {:project "deps.edn"}))
 (def uber-file (format "target/%s-%s-standalone.jar" (name lib) version))
+(def build-folder "target")
 
 (defn clean [_]
-      (b/delete {:path "target"}))
-
+      (b/delete {:path build-folder})                                 ; removing artifacts folder with (b/delete)
+      (println (format "Build folder \"%s\" removed" build-folder)))
 (defn uber [_]
       (clean nil)
       (b/copy-dir {:src-dirs ["src" "resources"]
