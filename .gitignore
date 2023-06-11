@@ -38,7 +38,7 @@ resources/private/js
 resources/public/js
 resources/public/js/cards
 resources/public/js/test
-target
+target_old
 resources/public/getting-started.html
 resources/public/.asciidoctor/
 resources/public/*.png

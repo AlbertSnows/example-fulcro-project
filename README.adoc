@@ -202,14 +202,6 @@ developer tools pane.
 
 Tests are in `src/test`. Any test namespace ending in `-test` will be auto-detected.
 
-```
-src/test
-└── app
-    └── sample_test.cljc          spec runnable by client and server.
-```
-
-You can write plain `deftest` in here, and it is preconfigured to support the helper macros in `fulcro-spec` as well.
-
 === Running tests:
 
 
